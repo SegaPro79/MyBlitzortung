@@ -31,8 +31,13 @@ function bo_insert_map($show_station=3, $lat=BO_LAT, $lon=BO_LON, $zoom=BO_DEFAU
                 $tileUrl = bo_tile_url()."?tile&type=0".bo_lang_arg('tile')."&bo_t=".$arg."&zoom={z}&x={x}&y={y}";
 
                 ?>
+
                 <link rel="stylesheet" href="includes/leaflet/leaflet.css" />
                 <script src="includes/leaflet/leaflet.min.js"></script>
+
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
                 <script>
                 document.addEventListener('DOMContentLoaded', function () {
                         var bo_map = L.map('bo_gmap').setView([<?php echo $lat ?>, <?php echo $lon ?>], <?php echo $zoom ?>);

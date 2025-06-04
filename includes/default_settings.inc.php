@@ -528,11 +528,17 @@
 
 //Completely disable the dynamic map
 @define('BO_MAP_DISABLE', false);
+
+// Map provider: use 'gmap' (Google Maps) or 'leaflet'. The codebase expects
+// Google Maps for most dynamic features, so keep it as default.
+@define('BO_MAP_PROVIDER', 'gmap');
+=======
 // map provider: 'gmap' or 'leaflet'
 // Using Google Maps without an API key no longer works reliably. Switching the
 // default provider to the open source Leaflet library ensures the map is
 // displayed without additional configuration.
 @define('BO_MAP_PROVIDER', 'leaflet');
+
 
 // default zoom level
 @define('BO_DEFAULT_ZOOM', 7);
@@ -1452,4 +1458,7 @@ define('BO_LOADAVG_TILES_STATIONS', 70);
 
 @define('BO_DEBUG', false); //enables PHP error reporting
 @define('BO_LANG_AUTO_ADD', false); //automatically adds missing translations to the locale file if it is writeable
+
 ?>
+
+

@@ -980,15 +980,49 @@ margin-top: 20px;
 }
 
 #myblitzortung #bo_gmap_home {
-#myblitzortung #bo_gmap_coord {
-margin-top: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
-#myblitzortung #bo_gmap_home {
-text-align: center;
-}
 
 #myblitzortung #bo_gmap {
 width: 100%;
 height: 80vh;
+}
+
+/* LightningMaps inspired dark theme */
+body {
+    background: #1b1b1b;
+    color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mybo_head {
+    background: #2b2b2b;
+    border-bottom: 1px solid #444;
+}
+
+#mybo_head h1,
+#mybo_head h2,
+#mybo_head h3,
+#mybo_head h4 {
+    color: #ffcc00;
+}
+
+ul#bo_mainmenu {
+    background: #2b2b2b;
+    border-bottom: 1px solid #444;
+}
+
+ul#bo_mainmenu li {
+    border-right: 1px solid #444;
+}
+
+ul#bo_mainmenu li a {
+    color: #f0f0f0;
+}
+
+ul#bo_mainmenu li a:hover,
+ul#bo_mainmenu li a.bo_mainmenu_active {
+    background: #444;
 }

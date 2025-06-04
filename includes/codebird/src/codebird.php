@@ -206,7 +206,7 @@ class Codebird
             } else {
                 parse_str($params[0], $apiparams);
                 // remove auto-added slashes if on magic quotes steroids
-                if (get_magic_quotes_gpc()) {
+                if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
                     foreach($apiparams as $key => $value) {
                         if (is_array($value)) {
                             $apiparams[$key] = array_map('stripslashes', $value);

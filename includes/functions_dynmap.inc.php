@@ -10,7 +10,7 @@ index ba5ec7c9a4623a6a3cb707837bd03d570149cc27..3a17127978848919815acf7282dbca40
  {
  	global $_BO;
  
- 	$radius = $_BO['radius'] * 1000;
+                echo "L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(bo_map);";
  
  	$info = bo_station_info();
  	

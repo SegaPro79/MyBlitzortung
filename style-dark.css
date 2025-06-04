@@ -1,0 +1,21 @@
+body {
+    background: #181818;
+    color: #eee;
+}
+
+#mybo_head h1,
+#mybo_head h2,
+#mybo_head h3,
+#mybo_head h4 {
+    color: #fff;
+}
+
+#myblitzortung .bo_gmap_button,
+#myblitzortung .bo_gmap_info {
+    background: rgba(255,255,255,0.1);
+    color: #eee;
+}
+
+#myblitzortung #bo_gmap {
+    height: 100vh;
+}

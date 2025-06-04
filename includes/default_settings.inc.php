@@ -530,6 +530,7 @@
 @define('BO_MAP_DISABLE', false);
 // map provider: 'gmap' or 'leaflet'
 @define('BO_MAP_PROVIDER', 'gmap');
+@define('BO_THEME', 'light');
 
 // default zoom level
 @define('BO_DEFAULT_ZOOM', 7);

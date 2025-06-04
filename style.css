@@ -980,13 +980,10 @@ margin-top: 20px;
 }
 
 #myblitzortung #bo_gmap_home {
-#myblitzortung #bo_gmap_coord {
-margin-top: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
-#myblitzortung #bo_gmap_home {
-text-align: center;
-}
 
 #myblitzortung #bo_gmap {
 width: 100%;

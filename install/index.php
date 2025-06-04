@@ -3,7 +3,9 @@
 
 error_reporting(E_ALL & ~E_NOTICE);
 ini_set('display_errors', 1);
-ini_set('magic_quotes_runtime', 0); 
+if (function_exists('ini_set')) {
+    @ini_set('magic_quotes_runtime', 0);
+}
 
 $path = realpath(dirname(__FILE__).'/../').'/';
 

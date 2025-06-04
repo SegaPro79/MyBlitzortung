@@ -44,8 +44,10 @@ if (!defined("BO_VER"))
 
 
 
-	//Some default PHP-Options
-	ini_set('magic_quotes_runtime', 0);
+        //Some default PHP-Options
+        if (function_exists('ini_set')) {
+                @ini_set('magic_quotes_runtime', 0);
+        }
 
 	//Config var.
 	global $_BO, $_BL;

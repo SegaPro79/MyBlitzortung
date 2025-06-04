@@ -10,10 +10,11 @@
  * Todo: User-configurable
  */
 
-if (class_exists('mysqli'))
-	require_once 'Db/Mysqli.class.php';
-else
-	require_once 'Db/Mysql.class.php';
+if (PHP_VERSION_ID >= 70000 || class_exists('mysqli')) {
+        require_once 'Db/Mysqli.class.php';
+} else {
+        require_once 'Db/Mysql.class.php';
+}
 
 
 

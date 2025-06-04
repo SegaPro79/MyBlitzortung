@@ -495,7 +495,9 @@ padding-top:6px;
 }
 
 #myblitzortung #bo_map_timerange select{
-font-size: 10px;
+    font-size: 10px;
+    color: #000;
+    background-color: #fff;
 }
 
 #myblitzortung #bo_only_station_id {
@@ -986,8 +988,8 @@ margin-top: 20px;
 
 
 #myblitzortung #bo_gmap {
-width: 100%;
-height: 80vh;
+    width: 100%;
+    height: calc(100vh - 120px);
 }
 
 /* LightningMaps inspired dark theme */

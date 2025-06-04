@@ -5,8 +5,8 @@ index ba5ec7c9a4623a6a3cb707837bd03d570149cc27..3a17127978848919815acf7282dbca40
 @@ -1,48 +1,75 @@
  <?php
  
- 
- function bo_insert_map($show_station=3, $lat=BO_LAT, $lon=BO_LON, $zoom=BO_DEFAULT_ZOOM, $type=BO_DEFAULT_MAP, $poverlay = false)
+                echo "<div id=\"bo_gmap\"></div>";
+                echo "L.tileLayer('".$tileUrl."',{tileSize:".BO_TILE_SIZE.",crossOrigin:false}).addTo(bo_map);";
  {
  	global $_BO;
  

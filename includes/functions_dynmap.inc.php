@@ -36,9 +36,9 @@ function bo_insert_map($show_station=3, $lat=BO_LAT, $lon=BO_LON, $zoom=BO_DEFAU
                 echo '<script>';
                 echo "var bo_map = L.map('bo_gmap').setView([$lat, $lon], $zoom);";
                 echo "L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(bo_map);";
-                echo "L.tileLayer('".$tileUrl."',{tileSize:".BO_TILE_SIZE."}).addTo(bo_map);";
+                echo "L.tileLayer('$tileUrl',{tileSize:".BO_TILE_SIZE."}).addTo(bo_map);";
                 if ($show_station & 1) {
-                        echo \"L.marker([$station_lat,$station_lon]).addTo(bo_map).bindPopup(\\\""._BC($station_text)."\\\");\";
+                        echo "L.marker([$station_lat,$station_lon]).addTo(bo_map).bindPopup('"._BC($station_text)."');";
                 }
                 echo '</script>';
                 return;

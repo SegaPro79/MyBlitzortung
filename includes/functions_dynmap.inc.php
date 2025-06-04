@@ -30,15 +30,28 @@ function bo_insert_map($show_station=3, $lat=BO_LAT, $lon=BO_LON, $zoom=BO_DEFAU
 
                 $tileUrl = bo_tile_url()."?tile&type=0".bo_lang_arg('tile')."&bo_t=".$arg."&zoom={z}&x={x}&y={y}";
 
-                echo "<div id=\"bo_gmap\" style=\"width:500px; height:400px;\"></div>";
-                echo '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />';
-                echo '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>';
-                echo '<script>';
-                echo "var bo_map = L.map('bo_gmap').setView([$lat, $lon], $zoom);";
-                echo "L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(bo_map);";
+                ?>
+                <div id="bo_gmap"></div>
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+                <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                        var bo_map = L.map('bo_gmap').setView([<?php echo $lat ?>, <?php echo $lon ?>], <?php echo $zoom ?>);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                maxZoom: 19,
+                                attribution: '&copy; OpenStreetMap contributors'
+                        }).addTo(bo_map);
+                        L.tileLayer('<?php echo $tileUrl ?>', {tileSize: <?php echo BO_TILE_SIZE ?>}).addTo(bo_map);
+                        <?php if ($show_station & 1) { ?>
+                        L.marker([<?php echo $station_lat ?>, <?php echo $station_lon ?>]).addTo(bo_map).bindPopup('<?php echo _BC($station_text) ?>');
+                        <?php } ?>
+                });
+                </script>
+                <?php
                 echo "L.tileLayer('".$tileUrl."',{tileSize:".BO_TILE_SIZE."}).addTo(bo_map);";
                 if ($show_station & 1) {
                         echo \"L.marker([$station_lat,$station_lon]).addTo(bo_map).bindPopup(\\\""._BC($station_text)."\\\");\";
+
                 }
                 echo '</script>';
                 return;

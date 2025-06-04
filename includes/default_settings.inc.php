@@ -529,11 +529,7 @@
 //Completely disable the dynamic map
 @define('BO_MAP_DISABLE', false);
 
-// Map provider: use 'gmap' (Google Maps) or 'leaflet'. The codebase expects
-// Google Maps for most dynamic features, so keep it as default.
-@define('BO_MAP_PROVIDER', 'gmap');
-
-// map provider: 'gmap' or 'leaflet'
+// Map provider: use 'gmap' (Google Maps) or 'leaflet'.
 // Using Google Maps without an API key no longer works reliably. Switching the
 // default provider to the open source Leaflet library ensures the map is
 // displayed without additional configuration.

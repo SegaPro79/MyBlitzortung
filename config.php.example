@@ -40,7 +40,10 @@ define("BO_STATION_ID", "");
 define("BO_TIMEZONE", "UTC");
 
 // Map provider: gmap or leaflet
-define("BO_MAP_PROVIDER", "gmap");
+// Google Maps now requires an API key. Leaflet works without one and
+// the required JS/CSS are bundled locally in includes/leaflet/.
+// Leaflet is the recommended default.
+define("BO_MAP_PROVIDER", "leaflet");
 
 
 //To see error messages, enable this (set to true)

@@ -1,7 +1,7 @@
 <?php
 
 //workaround for myblitzortung.ORG
-@define(BO_DB_PREF_USER, BO_DB_PREF);
+@define('BO_DB_PREF_USER', BO_DB_PREF);
 
 
 function bo_user_show_admin()

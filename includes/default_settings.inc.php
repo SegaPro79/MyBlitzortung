@@ -1452,7 +1452,3 @@ define('BO_LOADAVG_TILES_STATIONS', 70);
 
 @define('BO_DEBUG', false); //enables PHP error reporting
 @define('BO_LANG_AUTO_ADD', false); //automatically adds missing translations to the locale file if it is writeable
-
-
-
-?>

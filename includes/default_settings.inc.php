@@ -528,6 +528,8 @@
 
 //Completely disable the dynamic map
 @define('BO_MAP_DISABLE', false);
+// map provider: 'gmap' or 'leaflet'
+@define('BO_MAP_PROVIDER', 'gmap');
 
 // default zoom level
 @define('BO_DEFAULT_ZOOM', 7);
@@ -980,7 +982,7 @@
 @define('BO_GRAPH_RAW_H_STAT_SPEC', 150);
 
 
-//max. time in µs for displaying all graphs to a stroke
+//max. time in Âµs for displaying all graphs to a stroke
 @define('BO_GRAPH_RAW_MAX_TIME2', 350);
 
 //Colors
@@ -1408,7 +1410,7 @@ define('BO_LOADAVG_TILES_STATIONS', 70);
 @define('BO_TRIGGER_VOLTAGE', 0.45);
 
 //search interval for strike -> signal matching for foreign stations
-@define('BO_STR2SIG_INTERVAL_OTHERS', 8000); //µs
+@define('BO_STR2SIG_INTERVAL_OTHERS', 8000); //Âµs
 
 //needed for auto linking stations
 @define('BO_LINK_HOST', 'www.myblitzortung.org');

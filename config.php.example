@@ -39,6 +39,9 @@ define("BO_STATION_ID", "");
 //Your timezone
 define("BO_TIMEZONE", "UTC");
 
+// Map provider: gmap or leaflet
+define("BO_MAP_PROVIDER", "gmap");
+
 
 //To see error messages, enable this (set to true)
 define("BO_DEBUG", false);

@@ -48,12 +48,6 @@ function bo_insert_map($show_station=3, $lat=BO_LAT, $lon=BO_LON, $zoom=BO_DEFAU
                 });
                 </script>
                 <?php
-                echo "L.tileLayer('".$tileUrl."',{tileSize:".BO_TILE_SIZE."}).addTo(bo_map);";
-                if ($show_station & 1) {
-                        echo \"L.marker([$station_lat,$station_lon]).addTo(bo_map).bindPopup(\\\""._BC($station_text)."\\\");\";
-
-                }
-                echo '</script>';
                 return;
         }
 

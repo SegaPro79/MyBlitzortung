@@ -528,7 +528,8 @@
 
 //Completely disable the dynamic map
 @define('BO_MAP_DISABLE', false);
-// map provider: 'gmap' or 'leaflet'
+// Map provider: use 'gmap' (Google Maps) or 'leaflet'. The codebase expects
+// Google Maps for most dynamic features, so keep it as default.
 @define('BO_MAP_PROVIDER', 'gmap');
 
 // default zoom level

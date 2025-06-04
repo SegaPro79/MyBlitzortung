@@ -119,8 +119,8 @@ font-weight: bolder;
 
 /* Main */
 #myblitzortung {
-margin: 10px 10px 10px 15px;
-text-align: left;
+    margin: 0;
+    text-align: left;
 }
 
 #myblitzortung a, 
@@ -989,7 +989,7 @@ margin-top: 20px;
 
 #myblitzortung #bo_gmap {
     width: 100%;
-    height: calc(100vh - 120px);
+    height: 100vh;
 }
 
 /* LightningMaps inspired dark theme */
@@ -1027,4 +1027,14 @@ ul#bo_mainmenu li a {
 ul#bo_mainmenu li a:hover,
 ul#bo_mainmenu li a.bo_mainmenu_active {
     background: #444;
+}
+
+#mybo_head h1 {
+    background: #2b2b2b;
+    color: #ffcc00;
+    border-bottom: 1px solid #444;
+}
+
+#mybo_head h1 .bo_my {
+    color: #ffcc00;
 }
